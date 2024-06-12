@@ -1,0 +1,217 @@
+.main-perfil {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column; /* Adicionado para empilhar os elementos verticalmente em telas menores */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.area-foto {
+    position: relative;
+    margin-bottom: 20px; /* Adicionado espaçamento inferior para separar a foto do formulário */
+    
+}
+
+.img-foto {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-camera {
+    position: absolute;
+    background-color: var(--Solid-PURPLE-Normal);
+    padding: 6px;
+    border-radius: 50%;
+    left: 65%;
+    top: 65%
+}
+
+/* bolinha com icone da camera */
+#photo{
+    height: 30px;
+    width: 30px;
+}
+
+.welcome2{ /* nome do usuário*/
+    display: flex;    
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+}
+
+
+
+/* Estilos para o formulário de edição de perfil */
+#profile-form {
+    max-width: 90%; /* Alterado para ocupar até 90% da largura do contêiner pai */
+    text-align: center;
+    padding: 20px;
+
+    border-radius: 5px;
+    box-sizing: border-box; /* Adicionado para garantir que o padding não aumente a largura total */
+}
+
+#profile-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#profile-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px; /* Reduzido o espaçamento inferior para uma melhor aparência em telas menores */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#profile-form button {
+    width: 100%; /* Adicionado para ocupar 100% da largura do contêiner */
+    padding: 10px;
+    background-color: var(--Solid-PURPLE-Normal);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Adicione este estilo para a mensagem de confirmação */
+.success-message {
+    color: var(--Success-500-Normal);
+    margin-top: 10px;
+}
+
+/* Adicione esta classe para ocultar a mensagem de confirmação inicialmente */
+.hidden {
+    display: none;
+}
+
+
+.buttonDivPerfil #closeBtn{
+    background-color: var(--Solid-PURPLE-Normal);
+    color: var( --BG-Purple-1);
+    font-weight: 600;
+    
+}
+
+
+/* #profile-form button:hover {
+    background-color: var(--Solid-PURPLE-Hover);
+} */
+
+
+
+dialog::backdrop{
+    background-color: #00000099;
+  }
+
+
+
+  dialog .titlePerfil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    color: var(--Text-Alto-Contraste);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+
+  .titlePerfil h2{
+    padding: 10px;
+    font-size: 1rem;
+    font-family: var(--titulo-size);
+  }
+
+  /* componente do perfil */
+  .perfil-content,
+  .config-content,
+  .notificacao-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .config-content a p{
+    text-decoration: none;
+    color: var(--Text-Gray-Alto-Contraste);
+  }
+
+  .perfil-paragrafo{
+    font-size: var(--paragrafo-size);
+    font-weight: var(--titulo-weight-5);
+    line-height: 120%; 
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+  }
+
+  .icone-nome{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* linhas do perfil */
+  .perfil-line{
+    display: flex;
+    width: 343px;
+    align-items: center;
+    gap: 235px;
+    border-bottom: 0.5px solid var(--Borda-Gray-Forte);
+  }
+
+  .perfil-line2{
+    display: flex;
+    width: 343px;
+    align-items: center;
+    gap: 215px;
+    border-bottom: 0.5px solid var(--Borda-Gray-Forte);
+  }
+
+  .perfil-line3{
+    display: flex;
+    width: 343px;
+    padding: 1px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 0.5px solid var(--Borda-Gray-Forte);
+  }
+
+  .perfil-line4{
+    display: flex;
+    width: 343px;
+    align-items: center;
+    gap: 180px;
+    border-bottom: 0.5px solid var(--Borda-Gray-Forte);
+  }
+
+
+/* Mídia queries para tornar o formulário ainda mais responsivo */
+@media only screen and (max-width: 600px) {
+    .area-foto {
+        margin-bottom: 10px; /* Reduzido ainda mais o espaçamento inferior */
+    }
+
+    #profile-form {
+        padding: 15px; /* Reduzido o padding para telas menores */
+    }
+
+    #profile-form input[type="text"] {
+        margin-bottom: 10px; /* Reduzido ainda mais o espaçamento inferior */
+    }
+}
+
+

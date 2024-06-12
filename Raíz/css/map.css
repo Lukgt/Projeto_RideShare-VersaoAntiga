@@ -1,0 +1,40 @@
+
+    #map { 
+     width: 100%;
+     height: 100vh;
+     margin: 0 auto;
+     border-radius: 5px;
+   
+   }
+
+   .cardMap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    border: 3px solid var(--Borda-PURPLE-Sutil);
+    border-radius: 5px;
+    gap: 10px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+   }
+
+
+   .imgMotorista, .nomeMotorista{
+       margin: 0 auto;
+   }
+
+.profile-photo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+   .profile-photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+   }

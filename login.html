@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Raíz/css/styles.css">
+    <link rel="stylesheet" href="/Raíz/css/root.css">
+    <link rel="stylesheet" href="/Raíz/css/login.css">
+    <link rel="stylesheet" href="Páginas/Home/Assets/Button-Pocurar_Oferecer/button.css">
+    <link rel="stylesheet" href="Páginas/Entrada-index/carpoolstyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>RideShare - Login</title>
+</head>
+<body>
+    <!-- Inicío do header (animação) -->
+    <header>
+        <div class="login-header">
+            <img  class="img-capa" src="./Navegação/Assets/img/carro-escuro-capa.svg" alt="logo">
+            <!-- <img src="Navegação/Assets/img/rideshare_login.svg" alt="titulo do aplicativo"> -->
+            <h1 class="rideshare-index"><span>Ride</span>Share</h1>
+        </div>
+    </header>
+    <!-- Fim do header (animação) -->
+
+
+    <!-- Inicío do form de login -->
+    <main class="login-input">
+        <p class="subtitulo-login">Login</p>
+        <br>
+        <form class="login-form" action="home.html">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <br>
+                <input type="text" id="username" name="username" 
+                placeholder="Digite o seu nome" required>
+            </div>
+            <div class="form-group senha-group">
+                <label for="senha">Senha</label>
+                <br>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <i id="btnSenha" class="fa-solid fa-eye" onclick="showing()" ></i>
+
+            </div>
+            <div class="form-group-2">
+                <div class="checkboxes">
+                    <input type="checkbox" id="lembrar-senha" name="lembrar-senha">
+                    <label for="lembrar-senha">Lembrar senha?</label>
+                </div>
+                <div class="esqueceu-senha">
+                    <a href="">Esqueceu a senha?</a>
+                </div>
+            </div>
+            <!-- button direciona através do action na tag form-->
+            <button id="btn-login" type="submit">Login</button>
+        </form>
+
+        <!-- Inicío do form de login -->
+            <p class= "legenda-login">Ou</p>
+        <!-- Inicío login alternativo -->
+        <div class="login-buttons-Alternative">
+             <a href="home.html" class="facebook-button">
+                <img src="Navegação/Assets/img/facebook.svg" alt="Facebook Logo">
+                    Continue com Facebook
+            </a>
+            <a href="home.html" class="google-button">
+                <img src="Navegação/Assets/img/google.svg" alt="Google Logo">
+                    Continue com Google
+            </a>
+            <a href="home.html" class="apple-button">
+                <img src="Navegação/Assets/img/apple.svg" alt="Apple Logo">
+                    Continue com Apple
+            </a>
+        </div>
+        <!-- Fim login alternativo -->
+            <p class="legenda-login-2">Não tem conta? <a href="cadastro.html"> Cadastre-se </a></p>
+
+    </main>
+
+    <script src="./Páginas/Home/Assets/Button-Pocurar_Oferecer/passwordView.js"></script>
+    
+    <script src="./Raíz/js/jsforms.js"></script>  
+
+
+</body>
+</html>

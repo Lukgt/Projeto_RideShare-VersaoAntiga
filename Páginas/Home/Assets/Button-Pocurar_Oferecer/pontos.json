@@ -1,0 +1,72 @@
+[
+
+{
+    "id": 1,
+    "imagem":"./Navegação/Assets/img/modelo1.svg",
+    "nome": "Felipe Oliveira",
+    "distancia": "", 
+    "Tempo":"",
+    "Placa":"KGM-2399 - Fiat Uno",
+    "cor":"./Navegação/Assets/img/carro-cinza.svg",
+    "latitude":-8.05613,
+    "longitude":-34.89451
+},
+
+
+{
+    "id": 2,
+    "imagem":"./Navegação/Assets/img/modelo7.svg",
+    "nome": "Laura Porto",
+    "distancia": "", 
+    "Tempo":"",
+    "Placa":"KXM-2367 - Nissan March",
+    "cor":"./Navegação/Assets/img/carro-branco.svg",
+    "latitude":-8.02781,
+    "longitude":-34.91897
+},
+
+
+
+{
+    "id": 3,
+    "imagem":"./Navegação/Assets/img/modelo6.svg",
+    "nome": "João Guilherme",
+    "distancia": "", 
+    "Tempo":"",
+    "Placa":"KBR-4431 - Hyuindai HB20",
+    "cor":"./Navegação/Assets/img/carro-cinza.svg",
+    "latitude":-8.07202,
+    "longitude":-34.9099
+},
+
+
+
+{
+    "id": 4,
+    "imagem":"./Navegação/Assets/img/modelo5.svg",
+    "nome": "Fernanda Feijó",
+    "distancia": "", 
+    "Tempo":"",
+    "Placa":"KBB-2110 - Renault Sandero",
+    "cor":"./Navegação/Assets/img/carro-vermelho.svg",
+    "latitude":-8.07701,
+    "longitude":-34.93097
+},
+
+
+
+{
+    "id": 5,
+    "imagem":"./Navegação/Assets/img/modelo4.svg",
+    "nome": "Bruna Maia",
+    "distancia": "", 
+    "Tempo":"",
+    "Placa":"KDW-1377 - Renault Kwid",
+    "cor":"./Navegação/Assets/img/carro-preto.svg",
+    "latitude":-8.04709,
+    "longitude":-34.95526
+}
+
+
+
+]

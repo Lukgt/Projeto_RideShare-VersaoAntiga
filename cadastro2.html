@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Raíz/css/styles.css">
+    <link rel="stylesheet" href="/Raíz/css/root.css">
+    <link rel="stylesheet" href="/Raíz/css/cadastro.css">
+    <link rel="stylesheet" href="Páginas/Home/Assets/Button-Pocurar_Oferecer/button.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>RideShare - Cadastro 2</title>
+</head>
+<body>
+<!-- Início do header -->
+    <header>
+        <div class="header">
+            <div class="cadastro_title">
+                <a class="back" href="login.html"><img class="back-img" src="./Navegação/Assets/img/seta_voltar.svg" alt="seta de voltar ao login"></a>
+                <h2>Crie uma conta</h2>
+            </div>
+        </div>
+    </header>
+<!-- Fim do header -->
+<!-- Início da segunda parte do formulário de cadastro -->
+    <div class="cadastro_corpo">
+        <form class="cadastro-form" onsubmit="submitForm(); return false;">
+            <div class="passo-div">
+                <div class="passo"><p>Passo 2/2</p></div>
+            </div>
+            <p class="dados-titulo">Endereço</p>
+            <div class="form-group">
+                <input type="text" id="logradouro" name="logradouro" placeholder="Logradouro" required>
+            </div>
+            <div class="endereco-row">
+                <div class="form-group form-menor">
+                    <input type="text" id="numero" name="numero" placeholder="Número" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="bairro" name="bairro" placeholder="Bairro" required>
+                </div>
+            </div>
+            <div class="endereco-row">
+                <div class="form-group">
+                    <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+                </div>
+                <div class="form-group form-menor" >
+                    <input type="text" id="uf" name="uf" placeholder="UF" required>
+                </div>
+            </div>
+            <div class="form-group senha-group">
+                <input type="password" id="senha" name="senha" placeholder="Senha" required onblur="validatePassword()">
+                <i id="btnSenha" class="fa-solid fa-eye" onclick="showing()"></i>
+                <div id="senhaError" class="error-message">A senha deve ter pelo menos 5 caracteres e começar com uma letra maiúscula.</div>
+            </div>
+            <div class="form-group senha-group">
+                <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Confirme sua senha" required onblur="validateConfirmPassword()">
+                <i id="btnSenha2" class="fa-solid fa-eye" onclick="showingConfirm()"></i>
+                <div id="confirmaSenhaError" class="error-message">As senhas não coincidem.</div>
+            </div>
+            <div class="checkboxes">
+                <input type="checkbox" id="lembrarSenha" name="lembrarSenha">
+                <label for="lembrarSenha">Aceitar os termos de <a>uso e privacidade.</a></label>
+            </div>
+            <button type="submit" id="btn-cadastro2">Concluir Cadastro</button>
+        </form>
+    </div>
+<!-- Fim da segunda parte do formulário de cadastro -->
+</body>
+<script>
+    function submitForm() {
+      console.log("Submetendo formulário...");
+      const cadastroParte1 = JSON.parse(localStorage.getItem('cadastro'));
+      const logradouro = document.getElementById('logradouro').value;
+      const numero = document.getElementById('numero').value;
+      const bairro = document.getElementById('bairro').value;
+      const cidade = document.getElementById('cidade').value;
+      const uf = document.getElementById('uf').value;
+      const senha = document.getElementById('senha').value;
+      const confirmarSenha = document.getElementById('confirmaSenha').value;
+      const lembrarSenha = document.getElementById('lembrarSenha').checked;
+    
+
+    if (logradouro.trim() === '' || numero.trim() === '' || bairro.trim() === '' || 
+      cidade.trim() === '' || uf.trim() === '' || senha.trim() === '' || 
+      confirmarSenha.trim() === '') {
+    alert('Por favor, preencha todos os campos obrigatórios.');
+    return; // Impede o envio dos dados se algum campo estiver vazio
+  }
+
+      const cadastroCompleto = {
+        ...cadastroParte1,
+        logradouro,
+        numero,
+        bairro,
+        cidade,
+        uf,
+        senha,
+        confirmarSenha,
+        lembrarSenha
+      };
+    
+      console.log("Dados do formulário:", cadastroCompleto);
+    
+      fetch('http://localhost:3000/cadastro/add', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cadastroCompleto)
+      })
+      .then(response => {
+        console.log("Resposta recebida:", response);
+        if (response.ok) {
+          alert('Cadastro realizado com sucesso');
+          localStorage.removeItem('cadastro');
+          window.location.href = 'login.html';
+        } else {
+          alert('Erro ao realizar o cadastro');
+        }
+      })
+      .catch(error => {
+        console.error('Erro ao enviar formulário:', error);
+      });
+    }
+    </script>
+    <script src="./Páginas/Home/Assets/Button-Pocurar_Oferecer/passwordView.js"></script>
+    <script src="./Páginas/Home/Assets/Button-Pocurar_Oferecer/confirmaSenha.js"></script>
+       
+</html>
